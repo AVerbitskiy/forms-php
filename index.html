@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html lang="RU">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson 3 Forms and Tables</title>
+	<link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+	<div class="content">
+		<h1>Урок "Формы": теги и их атрибуты.</h1>
+		<h2>Расскажите немного о себе...</h2>
+		<p>Попробуйте создать аналогичную форму. Для целей демонстрации вполне подойдут и вымышленные.</p>
+		<form action="mail.php" method="POST" name="myform" enctype="multipart/form-data">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Site Name">
+				<input type="hidden" name="admin_email" value="alex_-_2005@ukr.net">
+				<input type="hidden" name="form_subject" value="Form Subject">
+				<!-- END Hidden Required Fields -->
+			<fieldset>
+				<legend class="bold">Коротко о себе</legend>
+				<ul class="about-me">
+					<li>
+						<label>Имя:<input type="text" name="first-name"></label>
+					</li>
+					<li>
+						<label>Фамилия:<input type="text" name="last-name"></label>
+					</li>
+					<li>
+						Пол:
+						<label><input checked type="radio" name="gender" value="male">мужской</label>
+						<label><input type="radio" name="gender" value="female">женский</label>
+					</li>
+					<li>
+						<label>Возраст:<input type="text" name="age">лет</label>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend class="bold">Подробнее о себе</legend>
+				<ul>
+					<li>
+						<label><input checked type="radio" name="sex" value="man">Молодой человек</label>
+					</li>
+					<li>
+						<label><input type="radio" name="sex" value="woman">Девушка</label>
+					</li>
+					<li>
+						<label><input type="date" name="calendar">Дата рождения</label>
+					</li>
+					<li>
+						<label><input type="text" name="family">Семейное положение</label>
+					</li>
+					<li>
+						<label><input type="text" name="social">Социальный статус</label>
+					</li>
+					<li>
+						<label><input type="text" name="adress">Местожительство</label>
+					</li>
+					<li class="bold">
+						Что вы обычно делаете на выходных:
+						<ul>
+							<li>
+								<label><input type="checkbox" name="weekend" value="slip">Сплю</label>
+							</li>
+							<li>
+								<label><input type="checkbox" name="weekend" value="walk">Гуляю с друзьями</label>
+							</li>
+							<li>
+								<label><input type="checkbox" name="weekend" value="fish">Хожу на рыбалку</label>
+							</li>
+							<li>
+								<label><input type="checkbox" name="weekend" value="play">Играю в игры</label>
+							</li>
+						</ul>
+					</li>
+					<li class="bold">
+						Рассказать о формах в книге, посвященной HTML:
+					</li>
+					<li>
+						<select name="form" >
+							<option value="one-book">Site frequency:</option>
+							<option value="second-book">Вторая книга</option>
+							<option value="third-book">Третья книга</option>
+						</select>
+					</li>
+					<li class="bold">
+						Сколько книг вы прочитали за свою жизнь:
+						<ul>
+							<li>
+								<label><input type="checkbox" name="book" value="0-10">0-10</label>
+							</li>
+							<li>
+								<label><input type="checkbox" name="book" value="11-20">11-20</label>
+							</li>
+							<li>
+								<label><input type="checkbox" name="book" value="21-50">21-50</label>
+							</li>
+							<li>
+								<label><input type="checkbox" name="book" value="50+">50+</label>
+							</li>
+						</ul>
+					</li>
+					<li class="bold">
+						Ваши комментарии:
+					</li>
+					<li>
+						<textarea name="text" cols="50" rows="10"></textarea>
+					</li>
+					<li>
+						<select multiple name="position" >
+							<option value="first-position">Первая позиция</option>
+							<option selected value="second-position">Вторая позиция</option>
+							<option value="third-position">Третья позиция</option>
+						</select>
+					</li>
+				</ul>	
+			</fieldset>
+			<fieldset>
+				<legend class="bold">И в заключении</legend>
+				<ul>
+					<li>
+						<input type="text" name="text" disabled value="Это поле было введено до вас">
+					</li>
+					<li class="bold">
+						Email:
+					</li>
+					<li>
+						<label><input type="email" name="email"></label>
+					</li>
+					<li class="bold">
+						Хотите подписаться на самую модную рассылку спама?
+					</li>
+					<li>
+						<span>Выберите категории:</span>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<label><input type="checkbox" name="сategory" value="eqyipment">Оборудование</label>
+							</li>
+							<li>
+								<label><input type="checkbox" name="сategory" value="dinner">Как приготовить обеды</label>
+							</li>
+							<li>
+								<label><input type="checkbox" name="сategory" value="salary">Заработай миллион за два дня</label>
+							</li>
+						</ul>
+					</li>
+					<li class="bold">
+						На сколько сложная задача:
+						<ul>
+							<li>
+								<label><input checked type="radio" name="problem" value="low">Совсем нет</label>
+							</li>
+							<li>
+								<label><input type="radio" name="problem" value="middle">Так себе</label>
+							</li>
+							<li>
+								<label><input type="radio" name="problem" value="high">Еле справились</label>
+							</li>
+						</ul>
+					</li>
+				</ul>	
+			</fieldset>
+			<div class="button">
+				<input type="submit" value="Отправить">
+			</div>
+	</form>
+	</div>
+	<!-- <form action="action.php" method="post">
+		<p>Ваше имя: <input type="text" name="name" /></p>
+		<p>Ваш возраст: <input type="text" name="age" /></p>
+		<p><input type="submit" /></p>
+	</form> -->
+	<script src="js/jquery-3.4.1"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

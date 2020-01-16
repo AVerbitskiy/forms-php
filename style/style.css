@@ -1,0 +1,42 @@
+.content {
+	width: 700px;
+	margin: 20px auto;
+}
+
+.bold {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.about-me li {
+	padding-bottom: 10px;
+}
+
+li {
+	list-style-type: none
+	}
+
+ul {
+	margin-left: 0; 
+	padding-left: 0;
+	}
+
+span {
+	font-style: italic;
+}
+
+ul {
+	font-weight: normal;
+}
+
+input [type="date"] {
+	min-width: 168px;
+}
+
+input [disabled], [name="email"] {
+	min-width: 250px;
+}
+
+fieldset {
+	margin-bottom: 20px;
+}
